@@ -1,5 +1,5 @@
 <div *ngIf="users.length > 0 ; else vacio" style="padding: 30px">
-  <div *ngFor="let user of users" [routerLink]="['/detail', user.id]" style="padding: 10px">
+  <div *ngFor="let user of users" routerLink="detail/1" style="padding: 10px">
     {{user.name}} {{user.surname}}
   </div>
 </div>
