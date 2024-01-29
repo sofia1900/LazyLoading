@@ -4,10 +4,8 @@ import {ListUsersComponent} from "./list-users/list-users.component";
 import {UserDetailComponent} from "./user-detail/user-detail.component";
 
 const routes: Routes = [
-  {path: 'list' , component : ListUsersComponent,
-    children : [
-      {path: 'detail/:id', component : UserDetailComponent}
-    ]}
+  {path: 'list' , component : ListUsersComponent},
+  {path: 'detail/:id', component : UserDetailComponent}
 ];
 
 @NgModule({
