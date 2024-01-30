@@ -18,7 +18,12 @@ export class UserDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.idUserSelect = this.route.snapshot.params['id']
-    this.userSelect = this.service.getUserById(this.idUserSelect)
+    this.route.paramMap.subscribe((params) => {
+      // Actualizar el componente con los nuevos parámetros
+      const id = params.get('id');
+      if (id != null) {
+        this.userSelect = this.service.getUserById(id);
+      }
+    });
   }
 }
